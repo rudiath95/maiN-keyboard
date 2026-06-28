@@ -36,12 +36,9 @@ Many on-screen keyboards have issues under Wayland:
 
 ## Installation
 
-### Arch Linux / CachyOS / Manjaro (AUR)
+### Manual Installation (recommended)
 
-```bash
-paru -S main-keyboard-git   # CachyOS
-yay -S main-keyboard-git    # Arch/Manjaro
-```
+This is a custom fork — not available in AUR. Install manually:
 
 > [!IMPORTANT]
 > After installation, add your user to the `input` group and then log out and back in:
@@ -49,17 +46,15 @@ yay -S main-keyboard-git    # Arch/Manjaro
 > sudo usermod -aG input $USER
 > ```
 
-### Manual Installation
-
 **Install dependencies:**
 ```bash
 sudo pacman -S python-pyqt6 python-evdev
 ```
 
-**Clone repository:**
+**Clone this fork:**
 ```bash
-git clone https://github.com/cachyOSMaiN/maiN-keyboard.git
-cd main-keyboard
+git clone https://github.com/rudiath95/maiN-keyboard.git
+cd maiN-keyboard
 ```
 
 **Install:**
@@ -116,4 +111,4 @@ MIT License
 
 ---
 
-**Keywords:** on-screen keyboard Linux, virtual keyboard KDE Plasma, Wayland on-screen keyboard, OSK Wayland, touchscreen keyboard Linux, software keyboard KDE, on-screen keyboard Python, uinput keyboard Linux, XWayland keyboard, on-screen keyboard Arch Linux, on-screen keyboard CachyOS, on-screen keyboard Manjaro, virtual keyboard Wayland focus, accessibility keyboard KDE
+**Keywords:** on-screen keyboard Linux, virtual keyboard KDE Plasma, Wayland on-screen keyboard, OSK Wayland, touchscreen keyboard Linux, software keyboard KDE, on-screen keyboard Python, uinput keyboard Linux, XWayland keyboard, on-screen keyboard Arch Linux, US keyboard layout, function keys F1-F12, accessibility keyboard KDE
