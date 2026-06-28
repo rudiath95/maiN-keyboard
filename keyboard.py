@@ -11,11 +11,9 @@ from evdev import ecodes
 
 from input_emitter import InputEmitter
 
-AVAILABLE_LAYOUTS = ['de', 'uk', 'us']
+AVAILABLE_LAYOUTS = ['us']
 
 LAYOUT_NAMES = {
-    'de': 'Deutsch (DE)',
-    'uk': 'English UK',
     'us': 'English US',
 }
 
@@ -85,7 +83,7 @@ class KeyboardWidget(QWidget):
 
     BASE_FONT_SIZE = 14
 
-    def __init__(self, layout='de', parent=None):
+    def __init__(self, layout='us', parent=None):
         super().__init__(parent)
 
         self.emitter = InputEmitter()

@@ -2,6 +2,9 @@
 """
 Virtual On-Screen Keyboard for KDE/Wayland
 
+Original work Copyright (c) MaiN (https://github.com/cachyOSMaiN/maiN-keyboard)
+Modified for US layout with function key row by rudiath95.
+
 Runs under XWayland for better focus handling.
 """
 
@@ -229,7 +232,7 @@ class VirtualKeyboard(QWidget):
         # Load saved settings
         config = load_config()
         self._current_scale = config.get('scale', 1.0)
-        self._current_layout = config.get('layout', 'de')
+        self._current_layout = config.get('layout', 'us')
         self._current_opacity = config.get('opacity', 1.0)
 
         # Main layout
@@ -254,7 +257,7 @@ class VirtualKeyboard(QWidget):
 
         # Base dimensions
         self._base_width = 900
-        self._base_height = 312
+        self._base_height = 366
 
         # Position at bottom and apply scale
         self._position_at_bottom()

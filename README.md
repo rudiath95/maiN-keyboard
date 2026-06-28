@@ -2,6 +2,8 @@
 
 An on-screen keyboard for KDE Plasma / Wayland that actually works.
 
+> **Note:** This fork is configured for **US (ANSI QWERTY) keyboard layout** with a function key row (Esc + F1–F12). All other layouts have been removed.
+
 ## Why MaiN_Keyboard?
 
 Many on-screen keyboards have issues under Wayland:
@@ -20,8 +22,8 @@ Many on-screen keyboards have issues under Wayland:
 - **No focus stealing** - Text fields remain active while typing
 - **Dark design** - Modern iOS-style buttons with 3D shadow effect
 - **Adjustable opacity** - Set transparency (50%-100%) via tray menu
-- **Multiple layouts** - German (DE), English UK, English US
-- **Layout switching** - Button in title bar or via tray menu
+- **Single US layout** - Standard US ANSI QWERTY with function key row
+- **Layout switching** - Button in title bar or via tray menu (single layout—no-op)
 - **Scalable** - Three sizes: S (100%), M (120%), B (160%)
 - **Monitor switching** - Move active window between monitors
 - **System Tray** - Minimizes to taskbar
@@ -89,7 +91,7 @@ sudo udevadm trigger
 | Action | Description |
 |--------|-------------|
 | **Drag title bar** | Move window |
-| **DE / UK / US** | Switch keyboard layout |
+| **US** | US keyboard layout (only option) |
 | **S / M / B** | Change size (Small/Medium/Big) |
 | **<- / ->** | Move active window to other monitor |
 | **✕** | Minimize to system tray |
@@ -107,9 +109,10 @@ sudo udevadm trigger
 
 MIT License
 
-## Author
+## Authors
 
-MaiN
+- **MaiN** — Original author ([cachyOSMaiN/maiN-keyboard](https://github.com/cachyOSMaiN/maiN-keyboard))
+- **rudiath95** — This fork (US layout with function key row)
 
 ---
 

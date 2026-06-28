@@ -1,11 +1,24 @@
-"""US QWERTY keyboard layout definition."""
+"""US QWERTY keyboard layout definition with function key row."""
 
 from evdev import ecodes
 
-# Key definitions: (normal_char, shift_char, keycode)
-# For special keys, normal_char is the display label
-
 LAYOUT = [
+    # Row 0: Function keys
+    [
+        ('Esc', 'Esc', ecodes.KEY_ESC),
+        ('F1', 'F1', ecodes.KEY_F1),
+        ('F2', 'F2', ecodes.KEY_F2),
+        ('F3', 'F3', ecodes.KEY_F3),
+        ('F4', 'F4', ecodes.KEY_F4),
+        ('F5', 'F5', ecodes.KEY_F5),
+        ('F6', 'F6', ecodes.KEY_F6),
+        ('F7', 'F7', ecodes.KEY_F7),
+        ('F8', 'F8', ecodes.KEY_F8),
+        ('F9', 'F9', ecodes.KEY_F9),
+        ('F10', 'F10', ecodes.KEY_F10),
+        ('F11', 'F11', ecodes.KEY_F11),
+        ('F12', 'F12', ecodes.KEY_F12),
+    ],
     # Row 1: Number row
     [
         ('`', '~', ecodes.KEY_GRAVE),
@@ -38,7 +51,7 @@ LAYOUT = [
         ('p', 'P', ecodes.KEY_P),
         ('[', '{', ecodes.KEY_LEFTBRACE),
         (']', '}', ecodes.KEY_RIGHTBRACE),
-        ('\\', '|', ecodes.KEY_BACKSLASH),
+        ('↵', '↵', ecodes.KEY_ENTER),
     ],
     # Row 3: Home row
     [
@@ -54,7 +67,7 @@ LAYOUT = [
         ('l', 'L', ecodes.KEY_L),
         (';', ':', ecodes.KEY_SEMICOLON),
         ("'", '"', ecodes.KEY_APOSTROPHE),
-        ('↵', '↵', ecodes.KEY_ENTER),
+        ('\\', '|', ecodes.KEY_BACKSLASH),
     ],
     # Row 4: Bottom letter row
     [
@@ -84,7 +97,6 @@ LAYOUT = [
     ],
 ]
 
-# Special keys that toggle or act as modifiers
 MODIFIER_KEYS = {
     ecodes.KEY_LEFTSHIFT,
     ecodes.KEY_RIGHTSHIFT,
@@ -94,15 +106,13 @@ MODIFIER_KEYS = {
     ecodes.KEY_CAPSLOCK,
 }
 
-# Keys that should have wider buttons
 WIDE_KEYS = {
     ecodes.KEY_BACKSPACE: 1.5,
     ecodes.KEY_TAB: 1.5,
-    ecodes.KEY_BACKSLASH: 1.5,
+    ecodes.KEY_ENTER: 1.5,
     ecodes.KEY_CAPSLOCK: 1.75,
-    ecodes.KEY_ENTER: 2.0,
-    ecodes.KEY_LEFTSHIFT: 2.0,
-    ecodes.KEY_RIGHTSHIFT: 2.5,
+    ecodes.KEY_LEFTSHIFT: 1.25,
+    ecodes.KEY_RIGHTSHIFT: 2.25,
     ecodes.KEY_LEFTCTRL: 1.25,
     ecodes.KEY_LEFTALT: 1.25,
     ecodes.KEY_SPACE: 6.0,
