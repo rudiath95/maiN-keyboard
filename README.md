@@ -32,7 +32,7 @@ Many on-screen keyboards have issues under Wayland:
 
 ## Screenshot
 
-![MaiN_Keyboard](https://i.ibb.co/RTxm3ypq/Bildschirmfoto-20260127-034035.png)
+![MaiN_Keyboard](screenshots/main-keyboard.png)
 
 ## Installation
 
